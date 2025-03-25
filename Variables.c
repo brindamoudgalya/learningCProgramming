@@ -15,8 +15,8 @@ int main() {
     char f = 120; // char is 1 byte (-128 to +127), can use %d or %c
     unsigned char g = 255; // unsigned char is 1 byte, but only positive (0 to +255 range), %d or %c
 
-    const int three = 3; // "const" means we can't re-initialize the constant variable later
-    // so "three = 5" would throw an error!!! yayayay.
+    const int THREE = 3; // "const" means we can't re-initialize the constant variable later
+    // so "THREE = 5" would throw an error!!! yayayay.
 
     
 
