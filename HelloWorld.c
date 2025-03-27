@@ -1,11 +1,14 @@
+
+/* this C file is for doing problems */
+
 #include <stdio.h> // preprocessor command, tells processor what to include
 
 int main() {
 
-    printf("I like pizza. \n");
-    printf("It's good\n");
-    printf("1\t2\t3\n4\t5\t6\n7\t8\t9\n");
-    
+    int a; float b; int c;
+    a = 25; b = 3.24; c = a + b * b - 34;
 
-    return 0; // return 0 if successful run, 1 if unsuccessful
+    printf("%d, %f, %d", a, b, c);
+
+    return 0; // return 0 if successful run, 1 if unsuccessful (or a non-zero number)
 }
