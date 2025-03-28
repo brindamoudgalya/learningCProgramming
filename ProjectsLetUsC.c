@@ -2,6 +2,24 @@
 # include <stdio.h>
 #include <math.h>
 
+void problem3_1() {
+    // if buying & selling price of an item is input by user, determine how much profit/loss seller made
+
+    float cost, sell_p;
+    printf("Give the cost of the item: ");
+    scanf(" %f", &cost);
+    printf("Give the price you want to sell at: ");
+    scanf(" %f", &sell_p);
+
+    if(cost > sell_p) {
+        printf("You have incurred loss. You lost $%f.", (cost-sell_p));
+    } else if (sell_p > cost) {
+        printf("You have made profit! You made $%f.", (sell_p-cost));
+    } else {
+        printf("You broke even.");
+    }
+}
+
 void problem2_3() {
     // compute smallest number of notes that will combine to give N rupees/dollars
     // given denominations of Rs/$ are 1, 2, 5, 10, 50, and 100
@@ -105,7 +123,7 @@ void problem1_1() {
 
 int main() {
 
-    problem2_3();
+    problem3_1();
 
     return 0;
 }
