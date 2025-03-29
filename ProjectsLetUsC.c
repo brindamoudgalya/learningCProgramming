@@ -2,6 +2,53 @@
 # include <stdio.h>
 #include <math.h>
 
+void exercise_d_a_ch4() {
+    // rgb to cmyk scale
+
+    int r, g, b;
+    printf("Specify values of R, G, and B separated by a space. ");
+    scanf("%d %d %d", &r, &g, &b);
+
+    float white, cyan, magenta, yellow, black;
+
+    if (r == g && r == b && r == 0) {
+        cyan = magenta = yellow = 0;
+        black = 1;
+    } else {
+        if (r >= g && r >= b) {
+            white = r/255;
+        } else if (g >= r && g >= b) {
+            white = g/255;
+        } else if (b >= r && b >= g) {
+            white = b/255;
+        }
+        cyan = (white-r/255)/white;
+        magenta = (white-g/255)/white;
+        yellow = (white-b/255)/white;
+        black = 1-white;
+    }
+
+
+    printf("%d %d %d %d", (int)cyan, (int)magenta, (int)yellow, (int)black);
+
+}
+
+void problem4_1() {
+    // given a year as input, check whether it is a leap year or not
+    int year;
+    printf("Give a year: ");
+    scanf("%d", &year);
+
+    // logic: if the year is divisible by 400 it's a leap year
+    // OR if the year is divisible by 4 and not by 100 it's a leap year
+    if (year%400==0 || (year%4==0 && !(year%100==0))) {
+        printf("Leap year");
+    } else {
+        printf("Not a leap year");
+    }
+
+}
+
 void problem3_1() {
     // if buying & selling price of an item is input by user, determine how much profit/loss seller made
 
@@ -123,7 +170,7 @@ void problem1_1() {
 
 int main() {
 
-    problem3_1();
+    exercise_d_a_ch4();
 
     return 0;
 }
